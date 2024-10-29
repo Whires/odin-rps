@@ -1,1 +1,1 @@
-# odin-rps
+The rock paper scissors javascript project from the odin project course!
