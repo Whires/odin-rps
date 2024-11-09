@@ -11,6 +11,9 @@ const rock = document.querySelector(".rock");
 const paper = document.querySelector(".paper");
 const scissors = document.querySelector(".scissors");
 const result = document.querySelector("#results");
+const score = document.querySelector("#score");
+
+
 
 rock.addEventListener("click", function (e) {
     playRound("rock");
@@ -49,6 +52,7 @@ function getComputerChoice(){
 
 function playRound(humanChoice, computerChoice){
     computerChoice = getComputerChoice();
+
     if (humanChoice == "paper" && computerChoice == "rock"){
         result.innerHTML = `You win! ${humanChoice} beats ${computerChoice}!`;
         humanScore++;
@@ -88,11 +92,9 @@ function playRound(humanChoice, computerChoice){
             paper.remove();
             scissors.remove();
         }
+    }
+
+    score.innerHTML = `Computer: ${computerScore} You: ${humanScore}`
 
     
-    }
 }
-
-
-
-
